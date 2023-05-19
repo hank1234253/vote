@@ -49,6 +49,7 @@ $tmp = $_GET['option'] ?? 2;
             </div>
             <div>
                 <input type="submit" value="新增">
+                <button type="button" onclick="location.href='?'">取消</button>
             </div>
         </form>
     </main>
