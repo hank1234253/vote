@@ -1,0 +1,15 @@
+.time-set>input[type="datetime-local"]{
+    margin: 15px;
+    margin-left: 0;
+}
+.subject{
+    width: 50%;
+    min-width: 350px;
+    height: 40px;
+    font-size: 24px;
+    font-family: '微軟正黑體','Courier New', Courier, monospace;
+}
+main{
+    width: 60%;
+    margin: 0 auto;
+}
