@@ -40,10 +40,11 @@
         </div>
         <div class="list-item"><?=$row["sum"]?></div>
         <div class="list-item">
-            <button onclick="location.href='./back/edit_vote.php?id=<?=$row['id']?>'">編輯</button>
-            <button onclick="location.href='./back/del_vote.php?id=<?=$row['id']?>'">刪除</button>
+            <button onclick="location.href='?do=edit_vote&id=<?=$row['id']?>'">編輯</button>
+            <button onclick="location.href='?do=del_vote&id=<?=$row['id']?>'">刪除</button>
             <button onclick="location.href='./api/open.php?id=<?=$row['id']?>'">立即上線</button>
             <button onclick="location.href='./api/close.php?id=<?=$row['id']?>'">立即下架</button>
+            <button onclick="location.href='?do=result&id=<?=$row['id']?>'">查看結果</button>
         </div>
     </li>
 <?php

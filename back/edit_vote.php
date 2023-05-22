@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="../js/jquery-3.7.0.min.js"></script>
-</head>
-
-<body>
-    <?php
-    include_once "../db.php";
+   <?php
     $sql = "select * from `topics` where `id`='{$_GET['id']}'";
     $row = $pdo->query($sql)->fetch();
     ?>
     <h1>編輯主題</h1>
-    <form action="../api/edit_vote.php" method="post">
+    <form action="./api/edit_vote.php" method="post">
         <div>
             <label for="">主題說明:</label>
             <input type="text" name="subject" id="subject" class="subject" value="<?= $row['subject'] ?>">
@@ -56,7 +42,7 @@
         <div>
             <input type="hidden" name="subject_id" value="<?=$row['id']?>">
             <input type="submit" value="編輯">
-            <button type="button" onclick="location.href='../backend.php'">取消</button>
+            <button type="button" onclick="location.href='./backend.php'">取消</button>
         </div>
     </form>
     <script>
@@ -75,6 +61,3 @@
             dom.remove();
         }
     </script>
-</body>
-
-</html>
