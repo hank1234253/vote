@@ -56,3 +56,18 @@ main{
 .list-item:nth-child(5){
     width:25%;
 }
+
+.vote-item{
+    padding: 5px;
+}
+.vote-item:nth-child(1){
+    width: 10%;
+    text-align: center;
+}
+.vote-item:nth-child(2){
+    width: 45%;
+}
+.vote-item:nth-child(3){
+    width: 30%;
+    text-align: center;
+}

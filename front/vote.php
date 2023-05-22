@@ -16,6 +16,7 @@ $options=$pdo->query("select * from `options` where `subject_id` ='{$_GET['id']}
     }
     ?>
 </ul>
+<input type="hidden" name="subject_id" value="<?=$_GET['id'];?>">
 <input type="submit" value="投票">
 <button type="button" onclick="location.href='?'">取消</button>
 </form>
