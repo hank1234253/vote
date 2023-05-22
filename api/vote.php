@@ -14,4 +14,18 @@ switch ($type) {
         }
         break;
 }
+if(isset($_SESSION['login'])){
+    
+    $mem_id=$pdo->query("select `id` from `members` where `acc`= '{$_SESSION['login']}'")->fetchColumn();
+}else{
+    $mem_id=0;
+}
+$topic_id=$_POST['subject_id'];
+date_default_timezone_set("Asia/Taipei");
+$vote_time=date("Y-m-d H:i:s");
+$records=serialize([$_POST['subject_id']=>$options]);
+
+$sql="insert into `logs`(`mem_id`,`topic_id`,`vote_time`,`records`)
+                   values('$mem_id','$topic_id','$vote_time','$records')";
+$pdo->exec($sql);
 header("location:../index.php?do=result&id={$subject_id}");
