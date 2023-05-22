@@ -71,3 +71,10 @@ main{
     width: 30%;
     text-align: center;
 }
+.vote-option-title{
+    display:flex;
+    width:100%;
+}
+.vote-option-title>.vote-item{
+    text-align: center;
+}
