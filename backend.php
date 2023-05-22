@@ -1,4 +1,6 @@
-<?php include_once "db.php";?>
+<?php 
+include_once "db.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +15,9 @@
 <body>
 <header>
     <a href="index.php">首頁</a>
-    <a href="login.php">登出</a>
-<nav>
     <a href='?do=add_vote'>新增投票</a>
-    <a href='./back/query_vote.php'>結果查詢</a>
-</nav>
+    <a href='./index.php?do=result_list'>結果查詢</a>
+    <a href="login.php">登出</a>
 </header>
 <main>
 <?php

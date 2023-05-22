@@ -14,7 +14,7 @@
             <div class="vote-item"><?= $idx+1 ?>.</div>
             <div class="vote-item"><?= $row['subject'] ?></div>
             <div class="vote-item">
-                <div class="type-info">
+                <button class="type-info">
                     <?php
                     switch ($row['type']) {
                         case 1:
@@ -25,7 +25,18 @@
                             break;
                     }
                     ?>
-                </div>
+                </button>
+                
+                    <?php
+                        if($row['login']==1){
+                            echo "<button class='vip-type'>";
+                            echo "會員限定";
+                        }else{
+                            echo "<button class='normal-type'>";
+                            echo "公開";
+                        }
+                    ?>
+                </button>
                 <button onclick="location.href='?do=vote&&id=<?= $row['id'] ?>'">我要投票</button>
             </div>
         </li>
