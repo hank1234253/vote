@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['error'])){
+    echo "<span style='color:red'>";
+    echo "帳號或密碼不可為空";
+    echo "</span>";
+}
+?>
 <form action="./api/reg.php" method="post">
     <div>
         <label for="acc">帳號</label><input type="text" name="acc" id="acc">
