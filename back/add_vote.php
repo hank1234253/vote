@@ -17,7 +17,7 @@ $tmp = $_GET['option'] ?? 2;
 <body>
     <main>
         <h1>新增主題</h1>
-        <form action="../api/add_vote.php" method="post">
+        <form action="./api/add_vote.php" method="post">
             <div>
                 <label for="">主題說明:</label>
                 <input type="text" name="subject" id="subject" class="subject">
@@ -30,7 +30,7 @@ $tmp = $_GET['option'] ?? 2;
             </div>
             <div>
                 <label for="">單複選:</label>
-                <input type="radio" name="type" value="1">單選&nbsp;&nbsp;
+                <input type="radio" name="type" value="1" checked>單選&nbsp;&nbsp;
                 <input type="radio" name="type" value="2">複選
             </div>
             <hr>

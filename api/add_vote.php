@@ -19,4 +19,5 @@
             }
         }
     }
+    header("location:../index.php");
 ?>
