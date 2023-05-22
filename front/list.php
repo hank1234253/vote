@@ -5,8 +5,10 @@
         <div class="vote-item">功能</div>
     </li>
     <?php
-
-    $sql = "select * from `topics` where 1";
+    date_default_timezone_set("Asia/Taipei");
+    $now=date("Y-m-d H:i:s");
+    
+    $sql = "select * from `topics` where `close_time`>='$now'";
     $rows = $pdo->query($sql)->fetchAll();
     foreach ($rows as $idx => $row) {
     ?>

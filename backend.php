@@ -17,7 +17,7 @@ include_once "db.php";
     <a href="index.php">首頁</a>
     <a href='?do=add_vote'>新增投票</a>
     <a href='./index.php?do=result_list'>結果查詢</a>
-    <a href="login.php">登出</a>
+    <a href="./api/logout.php">登出</a>
 </header>
 <main>
 <?php

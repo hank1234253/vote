@@ -21,7 +21,7 @@
     <?php
     }else{
     ?>
-    <a href="./backend.php">編輯    </a>
+    <a href="./backend.php">編輯</a>
     <a href="./api/logout.php">登出</a>
     <?php
     }
@@ -35,6 +35,5 @@
    ?>
 </main>
 <footer></footer>
-
 </body>
 </html>
