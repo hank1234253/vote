@@ -78,3 +78,12 @@ main{
 .vote-option-title>.vote-item{
     text-align: center;
 }
+
+.type-info{
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: lightgreen;
+    color: green;
+    font-size: 12px;
+}
