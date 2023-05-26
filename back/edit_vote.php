@@ -18,8 +18,12 @@
             <label for="">單複選:</label>
             <input type="radio" name="type" value="1" <?=$row['type']==1?'checked':''?>>單選&nbsp;&nbsp;
             <input type="radio" name="type" value="2" <?=$row['type']==2?'checked':''?>>複選
-            
         </div>
+        <div>
+                <label for="">是否公開:</label>
+                <input type="radio" name="login" value="0" <?=$row['login']==0?'checked':''?>>公開&nbsp;&nbsp;
+                <input type="radio" name="login" value="1" <?=$row['login']==1?'checked':''?>>會員限定
+            </div>
         <hr>
         <div class="options">
             <button type="button" onclick="addDiv()">新增選項欄位</button>

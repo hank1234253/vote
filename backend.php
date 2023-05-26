@@ -17,14 +17,29 @@ include_once "db.php";
 <header>
     <a href="index.php">首頁</a>
     <a href='?do=add_vote'>新增投票</a>
-    <a href='./index.php?do=result_list'>結果查詢</a>
+    <a href="?do=vote_history">投票紀錄</a>
     <a href="./api/logout.php">登出</a>
 </header>
 <main>
 <?php
-$do=$_GET['do']??"topic_list";
+
+if(isset($_GET['do'])){
+    $do=$_GET['do'];
+}else{
+    switch($_SESSION['pr']){
+        case "super":
+            $do="super";
+            break;
+            case "admin":
+                $do="admin";
+                break;
+                case "member":
+                    $do="member";
+                    break;
+    }
+}
 $file="./back/".$do.".php";
-    include (file_exists($file))?$file:"./back/topic_list.php";
+    include (file_exists($file))?$file:"./back/error.php";
 
     // if(file_exists($file)){
     //     include($file);

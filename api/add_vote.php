@@ -6,8 +6,8 @@
         echo "已有相同主題";
     }
     else{
-        $sql="INSERT INTO `topics` ( `subject`, `open_time`, `close_time`, `type`) 
-                        VALUES ('{$_POST['subject']}','{$_POST['open_time']}','{$_POST['close_time']}','{$_POST['type']}')";
+        $sql="INSERT INTO `topics` ( `subject`, `open_time`, `close_time`, `type`,`login`) 
+                        VALUES ('{$_POST['subject']}','{$_POST['open_time']}','{$_POST['close_time']}','{$_POST['type']}','{$_POST['login']}')";
         $pdo->exec($sql);
 
         $sql_subject_id="select `id` from `topics` where `subject`='{$_POST['subject']}'";

@@ -20,8 +20,18 @@
     <a href="?do=reg">註冊</a>
     <?php
     }else{
-    ?>
-    <a href="./backend.php">編輯</a>
+        switch($_SESSION['pr']){
+            case "super":
+                echo "<a href='./backend.php?do=super'>系統管理</a>";
+                break;
+            case "member":
+                echo "<a href='./backend.php?do=member'>會員中心</a>";
+                break;
+            case "admin";
+                echo "<a href='./backend.php?do=admin'>管理者</a>";
+                break;
+        }
+    ?> 
     <a href="./api/logout.php">登出</a>
     <?php
     }
