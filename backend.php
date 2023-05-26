@@ -19,6 +19,11 @@ include_once "db.php";
     <a href='?do=add_vote'>新增投票</a>
     <a href="?do=vote_history">投票紀錄</a>
     <a href="./api/logout.php">登出</a>
+    <?php 
+        if($_SESSION['pr']=="admin"){
+            echo "<a href='?do=query_vote'>投票明細</a>";
+        }
+    ?>
 </header>
 <main>
 <?php
